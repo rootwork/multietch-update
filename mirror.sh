@@ -8,4 +8,4 @@
 
 set -e
 
-wget --output-file=wget_error.log --recursive --level=inf --no-parent --page-requisites --convert-links --adjust-extension --continue --wait=3 --random-wait --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com
+wget --recursive --level=inf --no-parent --page-requisites --convert-links --adjust-extension --continue --wait=3 --random-wait --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com
