@@ -41,6 +41,10 @@ My regexfu failed me when combined with `sed` and its many (nonstandard) (annoyi
     <td>[\.\.\/]+universal</td>
     <td>\/files\/universal</td>
   </tr>
+  <tr>
+    <td>(href|src)="[\/]*[\.\.\/]*</td>
+    <td>$1="\/</td>
+  </tr>
 </table>
 
 Then for the simpler rewrites, run:
