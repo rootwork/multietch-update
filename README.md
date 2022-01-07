@@ -4,8 +4,11 @@ Squarespace export
 
 ## (Re)running the export
 
+We run `mirror.sh` twice because Squarespace is finicky and tries to deny access randomly. `wget` will ignore files that have already been retrieved in the second round.
+
 ```sh
 rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
+./mirror.sh
 ./mirror.sh
 mv images.squarespace-cdn.com/* docs/files
 mv static1.squarespace.com/* docs/files
