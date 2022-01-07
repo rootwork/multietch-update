@@ -16,11 +16,11 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.mul
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.multietch.com;href="/;g'
 
 # Changing relative links to assets
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;\(href|src\)="[\.\./]*s;\1="/files/s;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;\(href|src\)="[\.\./]*static1.squarespace.com;\1="/files;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;\(href|src\)="[\.\./]*images.squarespace-cdn.com;\1="/files;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;\(href|src\)="[\.\./]*assets.squarespace.com;\1="/files/assets;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;\(href|src\)="[\.\./]*universal;\1="/files/universal;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -iE 's;\(href|src\)="[\.\./]*s;\1="/files/s;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -iE 's;\(href|src\)="[\.\./]*static1.squarespace.com;\1="/files;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -iE 's;\(href|src\)="[\.\./]*images.squarespace-cdn.com;\1="/files;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -iE 's;\(href|src\)="[\.\./]*assets.squarespace.com;\1="/files/assets;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -iE 's;\(href|src\)="[\.\./]*universal;\1="/files/universal;g'
 
 # Changing specific links
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="index.html;href="/;g'

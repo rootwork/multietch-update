@@ -11,6 +11,17 @@ One quick way to check if all files are there is to look at the `etching-` files
 ```sh
 rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
 ./mirror.sh && ./mirror.sh && ./mirror.sh
-./move.sh
+./copy.sh
 ./rewrite.sh
 ```
+
+My regexfu failed me when combined with `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files:
+
+| From | To |
+|------|----|
+|href="../static1.squarespace.com|href="/files|
+|src="../static1.squarespace.com|src="/files|
+|href="../images.squarespace-cdn.com|href="/files|
+|src="../images.squarespace-cdn.com|src="/files|
+|href="../assets.squarespace.com|href="/files/assets|
+|src="../assets.squarespace.com|src="/files/assets|
