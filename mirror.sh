@@ -10,4 +10,4 @@ set -e
 
 wget --recursive --level=inf --page-requisites --convert-links --adjust-extension --continue --wait=3 --random-wait --execute robots=off --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com
 
-wget --recursive --level=inf --page-requisites --convert-links --adjust-extension --continue --wait=3 --random-wait --execute robots=off --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com/blog
+wget --recursive --level=inf -no-parent --page-requisites --convert-links --adjust-extension --continue --wait=3 --random-wait --execute robots=off --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com/blog
