@@ -41,7 +41,7 @@ find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/fil
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1601477178763-AP6A0LX8HXPT07G0EUC8/MEwebStripwwo%2B%282%29.jpg;/files/manual/MEwebStrip.jpg;g'
 
 # Fixing Zoho embed
-find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;src="/https://crm.zohopublic.com;https://crm.zohopublic.com;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;src="/https://crm.zohopublic.com;https://crm.zohopublic.com;g'
 
 # Removing unnecessary components
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="preconnect" href="/files/index.html">;;g'
