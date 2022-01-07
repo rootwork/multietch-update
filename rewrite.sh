@@ -30,7 +30,7 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<script type="text/ja
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<script type="text/javascript" src="/use.typekit.net/ik/d5_k-xXoeCy2ZHoc7fFRMiWtFOwVDV3XBgJgSyQAXoMfeCwIfFHN4UJLFRbh52jhWDmRwQiqFQsyZeI3wc4R5QSXwAFqZcmcFy79MkG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0SaBujW48SagyjhmDjhy8ZYmC-Ao1OcFzdP37O1sziAFydKu3ZAoXjAizdKuX52FRO1FUiABkZWF3jAF8OcFzdPUyjamTiY8Djhy8ZYmC-Ao1OcFzdPUyjamTiY8Djhy8ZYmC-Ao1Oco8ifUySkolZPUCdhFydeyzSabCdWmCie88ieFGOcFzdPUDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOYsziAFydKu3ZAoXjAizdKuX52FRO1FUiABkZWF3jAF8OcFzdPUaiaS0jAFu-WsoShFGZAsude80ZkoRdhXCiaiaOcBRiA8XpWFR-emqiAUTdcS0dcmXOYiaikoySkolZPUaiaS0dWmCie88ieFGOcFzdPUaiaS0SaBujW48SagyjhmDjhy8ZYmC-Ao1OcFzdPUaiaS0ieNujhB0OWg8d1syZhN0OWbtwhw0SaBujW48Sagyjh90jhNlJygcScmTZhyXOWFyd1wlSY4zH6qJqeqbMg62JMJ7fbRHmsMMeMb6MKG4f44TIMMjgPMfH6qJ8eqbMg6eJMJ7fbK5-sMMeMS6MKG4f4BTIMMj2PMfH6qJRAqbMg65JMJ7fbKQ-sMMeMv6MKG4f4mTIMMjIfMfH6qJRhqbMg6sJMHbM-h-7VCB.js"></script>;;g'
 
 # Adding CSS
-find . -name "site.css" -type f -print0 | xargs -0 sed -i 's#/\*\! Squarespace LESS Compiler  (less.js language v1.3.3)  \*/#@import "/files/manual/fonts/stylesheet.css"; @import "/files/manual/additions.css";#g'
+find . -name "site.css" -type f -print0 | xargs -0 sed -i 's#/\*\! Squarespace LESS Compiler  (less.js language v1.3.3)  \*/#@import "/files/manual/fonts/stylesheet.css";\n@import "/files/manual/additions.css";\n/\*\! Squarespace LESS Compiler  (less.js language v1.3.3)  \*/#g'
 
 # Changing references to primary domain
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.multietch.com/;href="/;g'
