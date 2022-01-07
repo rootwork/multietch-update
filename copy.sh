@@ -6,4 +6,3 @@ cp -r static1.squarespace.com/* docs/files
 cp -r assets.squarespace.com/* docs/files/assets
 cp -r www.multietch.com/* docs
 mv docs/s docs/files
-find . -regex ".*\.\(htmlE\|cssE\|jsE\)$" -type f -delete
