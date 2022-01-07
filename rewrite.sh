@@ -19,6 +19,7 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.mul
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="/index.html;href="/;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="about;href="/about;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="blog;href="/blog;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="../;href="/;g'
 
 # Removing unnecessary components
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="preconnect" href="/files/index.html">;;g'
