@@ -18,11 +18,11 @@ My regexfu failed me when combined with `sed` and its many (nonstandard) (annoyi
 
 | From | To |
 |------|----|
-|(href|src)="[\.\.\/]*s\/|$1="\/files\/s\/|
-|(href|src)="[\.\.\/]*static1.squarespace.com|$1="\/files|
-|(href|src)="[\.\.\/]*images.squarespace-cdn.com|$1="\/files|
-|(href|src)="[\.\.\/]*assets.squarespace.com|$1="\/files\/assets|
-|(href|src)="[\.\.\/]*universal|$1="\/files\/universal|
+|`(href|src)="[\.\.\/]*s\/`|`$1="\/files\/s\/`|
+|`(href|src)="[\.\.\/]*static1.squarespace.com`|`$1="\/files`|
+|`(href|src)="[\.\.\/]*images.squarespace-cdn.com`|`$1="\/files`|
+|`(href|src)="[\.\.\/]*assets.squarespace.com`|`$1="\/files\/assets`|
+|`(href|src)="[\.\.\/]*universal`|`$1="\/files\/universal`|
 
 Then for the simpler rewrites, run:
 
