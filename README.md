@@ -16,13 +16,32 @@ rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
 
 My regexfu failed me when combined with `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files in Sublime Text (with regex enabled):
 
-| From | To |
-|------|----|
-|`(href|src)="[\.\.\/]*s\/`|`$1="\/files\/s\/`|
-|`(href|src)="[\.\.\/]*static1.squarespace.com`|`$1="\/files`|
-|`(href|src)="[\.\.\/]*images.squarespace-cdn.com`|`$1="\/files`|
-|`(href|src)="[\.\.\/]*assets.squarespace.com`|`$1="\/files\/assets`|
-|`(href|src)="[\.\.\/]*universal`|`$1="\/files\/universal`|
+<table>
+  <tr>
+    <th>From</th>
+    <th>To</th>
+  </tr>
+  <tr>
+    <td>(href|src)="[\.\.\/]*s\/</td>
+    <td>$1="\/files\/s\/</td>
+  </tr>
+  <tr>
+    <td>(href|src)="[\.\.\/]*static1.squarespace.com</td>
+    <td>$1="\/files</td>
+  </tr>
+  <tr>
+    <td>(href|src)="[\.\.\/]*images.squarespace-cdn.com</td>
+    <td>$1="\/files</td>
+  </tr>
+  <tr>
+    <td>(href|src)="[\.\.\/]*assets.squarespace.com</td>
+    <td>$1="\/files\/assets</td>
+  </tr>
+  <tr>
+    <td>(href|src)="[\.\.\/]*universal</td>
+    <td>$1="\/files\/universal</td>
+  </tr>
+</table>
 
 Then for the simpler rewrites, run:
 
