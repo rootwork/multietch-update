@@ -3,7 +3,7 @@
 
 set -e
 
-wget --recursive -c --level=inf --page-requisites --convert-links --adjust-extension --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com https://www.multietch.com
+wget --recursive -c --level=inf --page-requisites --convert-links --adjust-extension --span-hosts --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com
 
 # If you see 429 errors ("Too many requests") try including:
 #   --wait=[seconds] --random-wait --continue ${https://www.multietch.com}
