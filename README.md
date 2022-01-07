@@ -5,8 +5,8 @@ Squarespace export
 ## (Re)running the export
 
 ```sh
-./mirror.sh
 rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
+./mirror.sh
 mv images.squarespace-cdn.com/* docs/files
 mv static1.squarespace.com/* docs/files
 mv assets.squarespace.com/* docs/files/assets
