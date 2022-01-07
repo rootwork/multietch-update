@@ -12,21 +12,20 @@ One quick way to check if all files are there is to look at the `etching-` files
 rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
 ./mirror.sh && ./mirror.sh && ./mirror.sh
 ./copy.sh
-./rewrite.sh
 ```
 
-My regexfu failed me when combined with `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files:
+My regexfu failed me when combined with `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files in Sublime Text (with regex enabled):
 
 | From | To |
 |------|----|
-|href="../static1.squarespace.com|href="/files|
-|src="../static1.squarespace.com|src="/files|
-|href="../images.squarespace-cdn.com|href="/files|
-|src="../images.squarespace-cdn.com|src="/files|
-|src="../assets.squarespace.com|src="/files/assets|
-|href="../../static1.squarespace.com|href="/files|
-|src="../../static1.squarespace.com|src="/files|
-|href="../../images.squarespace-cdn.com|href="/files|
-|src="../../images.squarespace-cdn.com|src="/files|
-|src="../../assets.squarespace.com|src="/files/assets|
-|../../../../../../../../universal|/files/universal|
+|(href|src)="[\.\.\/]*s\/|$1="\/files\/s\/|
+|(href|src)="[\.\.\/]*static1.squarespace.com|$1="\/files|
+|(href|src)="[\.\.\/]*images.squarespace-cdn.com|$1="\/files|
+|(href|src)="[\.\.\/]*assets.squarespace.com|$1="\/files\/assets|
+|(href|src)="[\.\.\/]*universal|$1="\/files\/universal|
+
+Then for the simpler rewrites, run:
+
+```sh
+./rewrite.sh
+```
