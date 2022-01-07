@@ -38,8 +38,8 @@ My regexfu failed me when combined with `sed` and its many (nonstandard) (annoyi
     <td>$1="\/files\/assets</td>
   </tr>
   <tr>
-    <td>(href|src)="[\.\.\/]*universal</td>
-    <td>$1="\/files\/universal</td>
+    <td>[\.\.\/]+universal</td>
+    <td>\/files\/universal</td>
   </tr>
 </table>
 
