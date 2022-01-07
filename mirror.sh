@@ -5,4 +5,4 @@
 
 set -e
 
-wget --recursive -c --level=inf --page-requisites --convert-links --adjust-extension --span-hosts --wait=1 --random-wait --continue --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com
+wget --recursive -c --level=inf --page-requisites --convert-links --adjust-extension --span-hosts --wait=2 --random-wait --continue --domains=multietch.com,squarespace-cdn.com,static1.squarespace.com,assets.squarespace.com https://www.multietch.com
