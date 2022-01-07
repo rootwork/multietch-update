@@ -13,12 +13,11 @@ rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
 ./mirror.sh
 ./mirror.sh
 ./mirror.sh
-mv images.squarespace-cdn.com/* docs/files
-mv static1.squarespace.com/* docs/files
-mv assets.squarespace.com/* docs/files/assets
-mv www.multietch.com/* docs
+cp -r images.squarespace-cdn.com/* docs/files
+cp -r static1.squarespace.com/* docs/files
+cp -r assets.squarespace.com/* docs/files/assets
+cp -r www.multietch.com/* docs
 mv docs/s docs/files
-rm -rf www.multietch.com && rm -rf images.squarespace-cdn.com && rm -rf static1.squarespace.com && rm -rf assets.squarespace.com
 cd docs
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;https://images.squarespace-cdn.com/content;/files/content;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;https://assets.squarespace.com;/files/assets;g'
