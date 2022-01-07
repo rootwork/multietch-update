@@ -15,8 +15,15 @@ find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;http
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;https://www.multietch.com/assets.squarespace.com;/files/assets;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;"//assets.squarespace.com/files;"/files/assets;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;"//files;"/files;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/images.squarespace-cdn.com;/files;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/static1.squarespace.com;/files;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/assets.squarespace.com;/files/assets;g'
+
+# Fixing third-party embeds
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;src="/https://use.typekit.net;src="https://use.typekit.net;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;src="/use.typekit.net;src="https://use.typekit.net;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/assets/files;/files/assets;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;src="/https://crm.zohopublic.com;https://crm.zohopublic.com;g'
 
 # Changing references to primary domain
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.multietch.com/;href="/;g'
