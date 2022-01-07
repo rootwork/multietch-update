@@ -23,5 +23,10 @@ My regexfu failed me when combined with `sed` and its many (nonstandard) (annoyi
 |src="../static1.squarespace.com|src="/files|
 |href="../images.squarespace-cdn.com|href="/files|
 |src="../images.squarespace-cdn.com|src="/files|
-|href="../assets.squarespace.com|href="/files/assets|
 |src="../assets.squarespace.com|src="/files/assets|
+|href="../../static1.squarespace.com|href="/files|
+|src="../../static1.squarespace.com|src="/files|
+|href="../../images.squarespace-cdn.com|href="/files|
+|src="../../images.squarespace-cdn.com|src="/files|
+|src="../../assets.squarespace.com|src="/files/assets|
+|../../../../../../../../universal|/files/universal|
