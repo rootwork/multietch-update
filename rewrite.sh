@@ -13,6 +13,7 @@ find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;http
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;https://www.multietch.com/images.squarespace-cdn.com;/files;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;https://www.multietch.com/static1.squarespace.com;/files;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;https://www.multietch.com/assets.squarespace.com;/files/assets;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;"//assets.squarespace.com/files;"/files/assets;g'
 
 # Changing references to primary domain
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.multietch.com/;href="/;g'
