@@ -54,3 +54,6 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;    <!-- This is Squa
 
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/about";"/about/history.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/etch-rates-1";"/etch-rates.html";g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourhistory";"/about/history.html";g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourteam";"/about/team.html";g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/multietch-resources.html";"/multietch-how-to-videos-resources.html";g'
