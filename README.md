@@ -14,6 +14,8 @@ rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
 ./copy.sh
 ```
 
+### Mass-file updates
+
 My regexfu failed me when combined with capture groups and `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files in Sublime Text (with regex enabled):
 
 <table>
@@ -52,3 +54,21 @@ Then for the simpler rewrites, run:
 ```sh
 ./rewrite.sh
 ```
+
+### Manual page updates
+
+A few pages benefit from specific fixes that we were never able to do within Squarespace. Using Sublime Text (with regex enabled), find and replace in these files:
+
+
+<table>
+  <tr>
+    <th>File</th>
+    <th>From</th>
+    <th>To</th>
+  </tr>
+  <tr>
+    <td>`about/testimonials.html`</td>
+    <td>`<p class="entry-more-link">.*</p>`</td>
+    <td>`[blank]`</td>
+  </tr>
+</table>
