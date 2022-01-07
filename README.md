@@ -14,7 +14,7 @@ rm -rf docs && mkdir docs && mkdir docs/files && mkdir docs/files/assets
 ./copy.sh
 ```
 
-My regexfu failed me when combined with `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files in Sublime Text (with regex enabled):
+My regexfu failed me when combined with capture groups and `sed` and its many (nonstandard) (annoying) idiosyncrases. So then we need to do manual find and replace across the 'docs' files in Sublime Text (with regex enabled):
 
 <table>
   <tr>
