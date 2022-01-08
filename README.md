@@ -59,16 +59,4 @@ Then for the simpler rewrites, run:
 
 A few pages benefit from specific fixes that we were never able to do within Squarespace. Using Sublime Text (with regex enabled), find and replace in these files:
 
-
-<table>
-  <tr>
-    <th>File</th>
-    <th>From</th>
-    <th>To</th>
-  </tr>
-  <tr>
-    <td>`about/testimonials.html`</td>
-    <td>`<p class="entry-more-link">.*</p>`</td>
-    <td>`[blank]`</td>
-  </tr>
-</table>
+* `about/testimonials.html`: replace `<p class="entry-more-link">.*</p>` with nothing
