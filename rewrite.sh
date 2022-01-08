@@ -42,6 +42,7 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="about;href="/ab
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="blog;href="/blog;g'
 
 # Fixing specific files
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1601476976612-M1TGJBW2PYRBKIP8TUHA/ColorSpectrumWebsiteed4.jpg;/files/manual/ColorSpectrumWebsiteed4.jpg;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/static/5c17d54ada02bc9741cdfef6/t/5ce56011de1c3c0001af3c72/1558536211042/MultiEtchLogo.png?format=1500w;/files/manual/MultiEtchLogo.png;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;//files/content/v1/5c17d54ada02bc9741cdfef6/1558536209828-UW6CNJOOOVI7IWQCKFPT/MultiEtchLogo.png;/files/manual/MultiEtchLogo.png;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1558536209828-UW6CNJOOOVI7IWQCKFPT/MultiEtchLogo.png?format=1500w;/files/manual/MultiEtchLogo.png;g'
