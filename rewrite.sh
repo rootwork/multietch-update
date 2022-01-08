@@ -52,6 +52,8 @@ find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/fil
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/static/5c17d54ada02bc9741cdfef6/t/5d39fa379093590001fe24f2/1564080708011/Meboxesproductphoto+%281%29.jpg?format=1500w;/files/manual/Meboxesproductphoto.jpg;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1551196972887-1WW3DW8E77DY9V68ZXZ9/Meboxesproductphoto.jpg;/files/manual/Meboxesproductphoto.jpg;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1558536278082-MN7RNVXUCE576XD8HZSY/favicon.ico?format=100w;/files/manual/favicon.ico;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/assets/@sqs/polyfiller/1.2.2/modern.js.gz;/files/manual/modern.js;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/assets/@sqs/polyfiller/1.2.2/modern.js;/files/manual/modern.js;g'
 
 # Fixing Zoho embed
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;src="/https://crm.zohopublic.com;https://crm.zohopublic.com;g'
@@ -86,3 +88,5 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<link rel="canonic
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<div class="newer"><a href="/;<div class="newer"><a href="/blog/;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<div class="older"><a href="/;<div class="older"><a href="/blog/;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;/blog/blog/;/blog/;g'
+
+# Fixing pages we never could with Squarespace
