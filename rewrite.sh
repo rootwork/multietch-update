@@ -69,3 +69,7 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/etch-rates-1";"/etc
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourhistory";"/about/history.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourteam";"/about/team.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/multietch-resources.html";"/multietch-how-to-videos-resources.html";g'
+
+# Remove blog sharing/commenting
+cd blog
+find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;      <div class="entry-actions">.*<div class="author-profile">;<div class="author-profile">;g'
