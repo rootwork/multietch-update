@@ -57,8 +57,11 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="preconnect
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://www.multietch.com/home?format=rss" />;;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;    <!-- This is Squarespace. --><!-- toucan-pentagon-t83c -->;;g'
 
-# Fixing navigation menu links
+# Fixing external links
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="/http;href="http;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;src="/http;src="http;g'
 
+# Fixing navigation menu links
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/about";"/about/history.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/etch-rates-1";"/etch-rates.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourhistory";"/about/history.html";g'
