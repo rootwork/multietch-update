@@ -60,3 +60,4 @@ Then for the simpler rewrites, run:
 A few pages benefit from specific fixes that we were never able to do within Squarespace. Using Sublime Text (with regex enabled), find and replace in these files:
 
 * `about/testimonials.html`: replace `<p class="entry-more-link">.*</p>` with nothing
+* `multietch-blog.html`: replace `"baseUrl":"https://www.multietch.com"` with `"baseUrl":"/"`
