@@ -19,6 +19,7 @@ find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/ima
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/static1.squarespace.com;/files;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/assets.squarespace.com;/files/assets;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/assets/files;/files/assets;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;"/s/;"/files/s/;g'
 
 # Changing internal URLs
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"appDomain":"squarespace.com";"appDomain":"multietch.com";g'
@@ -47,8 +48,10 @@ find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/fil
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;//files/content/v1/5c17d54ada02bc9741cdfef6/1558536209828-UW6CNJOOOVI7IWQCKFPT/MultiEtchLogo.png;/files/manual/MultiEtchLogo.png;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1558536209828-UW6CNJOOOVI7IWQCKFPT/MultiEtchLogo.png?format=1500w;/files/manual/MultiEtchLogo.png;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1601477178763-AP6A0LX8HXPT07G0EUC8/MEwebStripwwo%2B%282%29.jpg;/files/manual/MEwebStrip.jpg;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/static/5c17d54ada02bc9741cdfef6/t/6042cf08b6e60c40a43372c4/1616450079456/multietch-cover-image.jpg?format=1500w;/files/manual/multietch-cover-image.jpg;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/static/5c17d54ada02bc9741cdfef6/t/5d39fa379093590001fe24f2/1564080708011/Meboxesproductphoto+%281%29.jpg?format=1500w;/files/manual/Meboxesproductphoto.jpg;g'
 find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1551196972887-1WW3DW8E77DY9V68ZXZ9/Meboxesproductphoto.jpg;/files/manual/Meboxesproductphoto.jpg;g'
+find . -regex ".*\.\(html\|css\|js\)$" -type f -print0 | xargs -0 sed -i 's;/files/content/v1/5c17d54ada02bc9741cdfef6/1558536278082-MN7RNVXUCE576XD8HZSY/favicon.ico?format=100w;/files/manual/favicon.ico;g'
 
 # Fixing Zoho embed
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;src="/https://crm.zohopublic.com;https://crm.zohopublic.com;g'
@@ -56,6 +59,7 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;src="/https://crm.zoh
 # Removing unnecessary components
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="preconnect" href="/files/index.html">;;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://www.multietch.com/home?format=rss" />;;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/home?format=rss" />;;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;    <!-- This is Squarespace. --><!-- toucan-pentagon-t83c -->;;g'
 
 # Fixing external links
@@ -71,6 +75,8 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourhistory";"/about
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourteam";"/about/team.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/multietch-resources.html";"/multietch-how-to-videos-resources.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.multietch.com/;href="/;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/history"/>;"/about/history" />;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/testimonials"/>;"/about/testimonials" />;g'
 
 # Remove blog sharing/commenting
 cd blog
