@@ -60,6 +60,8 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;    <!-- This is Squa
 # Fixing external links
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="/http;href="http;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;src="/http;src="http;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="/tel;href="tel;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="/mailto;href="mailto;g'
 
 # Fixing navigation menu links
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/about";"/about/history.html";g'
