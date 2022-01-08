@@ -1,7 +1,8 @@
 /* Previous slide controls */
 #featured-display-section .index-gallery .arrow.previous-slide::before,
 #testimonials-display-section .sqs-gallery-controls .previous::before,
-#block-yui_3_17_2_1_1550077185242_5503 .sqs-gallery-controls .previous::before {
+#block-yui_3_17_2_1_1550077185242_5503 .sqs-gallery-controls .previous::before,
+.pagination .newer a::after {
   content: "\2B9C" !important;
   font-family: 'freight-sans-pro' !important;
   font-size: 32px !important;
@@ -13,7 +14,8 @@
 /* Next slide controls */
 #featured-display-section .index-gallery .arrow.next-slide::before,
 #testimonials-display-section .sqs-gallery-controls .next::before,
-#block-yui_3_17_2_1_1550077185242_5503 .sqs-gallery-controls .next::before {
+#block-yui_3_17_2_1_1550077185242_5503 .sqs-gallery-controls .next::before,
+.pagination .older a::after {
   content: "\2B9E" !important;
   font-family: 'freight-sans-pro' !important;
   font-size: 32px !important;
