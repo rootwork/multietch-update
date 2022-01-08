@@ -75,3 +75,6 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.mul
 # Remove blog sharing/commenting
 cd blog
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;      <div class="entry-actions">.*<div class="author-profile">;<div class="author-profile">;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<div class="newer"><a href="/;<div class="newer"><a href="/blog/;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<div class="older"><a href="/;<div class="older"><a href="/blog/;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;href="/blog/blog/;href="/blog/;g'
