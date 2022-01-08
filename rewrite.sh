@@ -76,12 +76,13 @@ find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourhistory";"/about
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/ourteam";"/about/team.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/multietch-resources.html";"/multietch-how-to-videos-resources.html";g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;href="https://www.multietch.com/;href="/;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/history"/>;"/about/history" />;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/testimonials"/>;"/about/testimonials" />;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/history;"/about/history;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i 's;"/testimonials;"/about/testimonials;g'
 
-# Remove blog sharing/commenting
+# Adjust blog entries
 cd blog
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;      <div class="entry-actions">.*<div class="author-profile">;<div class="author-profile">;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<link rel="canonical" href="/;<link rel="canonical" href="/blog/;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<div class="newer"><a href="/;<div class="newer"><a href="/blog/;g'
 find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;<div class="older"><a href="/;<div class="older"><a href="/blog/;g'
-find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;href="/blog/blog/;href="/blog/;g'
+find . -name "*.html" -type f -print0 | xargs -0 sed -i -z 's;/blog/blog/;/blog/;g'
