@@ -1,7 +1,7 @@
 /* Previous slide controls */
-.sqs-block-summary-v2 .sqs-gallery-design-carousel .sqs-gallery-controls .previous::before,
-.collection-type-index:not(.design-grid) .index-gallery .arrow.previous-slide::before,
-.sqs-gallery-controls .previous::before {
+#featured-display-section .index-gallery .arrow.previous-slide::before,
+#testimonials-display-section .sqs-gallery-controls .previous::before,
+#block-yui_3_17_2_1_1550077185242_5503 .sqs-gallery-controls .previous::before {
   content: "\2B9C" !important;
   font-family: 'freight-sans-pro' !important;
   font-size: 32px !important;
@@ -11,9 +11,9 @@
 }
 
 /* Next slide controls */
-.sqs-block-summary-v2 .sqs-gallery-design-carousel .sqs-gallery-controls .next::before,
-.collection-type-index:not(.design-grid) .index-gallery .arrow.next-slide::before,
-.sqs-gallery-controls .next::before {
+#featured-display-section .index-gallery .arrow.next-slide::before,
+#testimonials-display-section .sqs-gallery-controls .next::before,
+#block-yui_3_17_2_1_1550077185242_5503 .sqs-gallery-controls .next::before {
   content: "\2B9E" !important;
   font-family: 'freight-sans-pro' !important;
   font-size: 32px !important;
