@@ -64,8 +64,13 @@ A few pages benefit from specific fixes that we were never able to do within Squ
 
 Run [Linkchecker](https://linkchecker.github.io/linkchecker/index.html) from the command line, on a local or hosted version of the exported site, to determine broken links. Commands:
 
-`linkchecker --no-robots -F html --ignore-url='/tag' --ignore-url='/category' <siteurl>`
-`linkchecker --no-robots -F csv --ignore-url='/tag' --ignore-url='/category' <siteurl>`
+```sh
+linkchecker --no-robots -F html --ignore-url='/tag' --ignore-url='/category' <siteurl>`
+```
+
+```sh
+linkchecker --no-robots -F csv --ignore-url='/tag' --ignore-url='/category' <siteurl>`
+```
 
 The latter of these was used to create `brokenlinks.csv` which can be used to manually, tediously, update broken images. (Be sure to do a search/find for all instances of the broken image, not only the instance it found, as it can overlook things like meta tags or JS files.)
 
