@@ -62,4 +62,15 @@ A few pages benefit from specific fixes that we were never able to do within Squ
 * `about/testimonials.html`: replace `<p class="entry-more-link">.*</p>` with nothing
 * `multietch-blog.html`: replace `"baseUrl":"https://www.multietch.com"` with `"baseUrl":"/"`
 
-Finally, tediously, use `brokenlinks.csv` to manually update some of the image links.
+Run [Linkchecker](https://linkchecker.github.io/linkchecker/index.html) from the command line, on a local or hosted version of the exported site, to determine broken links. Commands:
+
+`linkchecker --no-robots -F html --ignore-url='/tag' --ignore-url='/category' <siteurl>`
+`linkchecker --no-robots -F csv --ignore-url='/tag' --ignore-url='/category' <siteurl>`
+
+The latter of these was used to create `brokenlinks.csv` which can be used to manually, tediously, update broken images. (Be sure to do a search/find for all instances of the broken image, not only the instance it found, as it can overlook things like meta tags or JS files.)
+
+## Post-export fixes
+
+* Any embedded videos that were using custom image overlays in Squarespace need to be re-embedded directly. We could use other (non-SS) libraries in the future to have custom image overlays again, but we don't need that right away.
+
+* Slideshows don't show controls consistently and were always substandard anyway, so they need to be fully replaced.
