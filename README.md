@@ -79,3 +79,5 @@ The latter of these was used to create `brokenlinks.csv` which can be used to ma
 * Any embedded videos that were using custom image overlays in Squarespace need to be re-embedded directly. We could use other (non-SS) libraries in the future to have custom image overlays again, but we don't need that right away.
 
 * Slideshows don't show controls consistently and were always substandard anyway, so they need to be fully replaced.
+
+* Contact forms (contact page and "keeping etch times consistent" page) need to be replaced with a non-SS option.
