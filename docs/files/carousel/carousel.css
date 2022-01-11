@@ -122,7 +122,7 @@
   font-family: 'freight-sans-pro';
   font-weight: 400;
   font-style: normal;
-  font-size: 66px;
+  font-size: 66px !important;
   line-height: 1.2em;
   text-transform: capitalize;
 }
