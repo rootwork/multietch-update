@@ -26,6 +26,6 @@
   line-height: 32px !important;
 }
 
-img, iframe, video {
+iframe, video {
   max-width: 100% !important;
 }
