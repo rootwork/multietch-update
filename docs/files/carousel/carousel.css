@@ -1,4 +1,14 @@
-/* Carousel styles */
+/* ========================================================================== */
+/* TOC:
+ * 1. Industries and testimonials carousels
+ * 2. Product carousel
+ * 3. Common classes
+ */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* 1. INDUSTRIES and TESTIMONIALS CAROUSELS */
+/* ========================================================================== */
 
 /** Wrapper */
 .carousel {
@@ -13,7 +23,7 @@
 }
 
 /* Resets for all buttons */
-.is-control {
+.carousel .is-control {
   z-index: 1;
   background: none;
   color: rgba(0,0,0,0.7);
@@ -26,7 +36,7 @@
   color: rgba(0,0,0,0.2);
 }
 
-.is-control:focus {
+.carousel .is-control:focus {
   outline: none;
   background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,1);
@@ -37,9 +47,280 @@
 }
 
 /* Pause/play toggle for autoplay */
-.slick-autoplay-toggle-button {
+.carousel .slick-autoplay-toggle-button {
   bottom: 15px;
   left: 10px;
+}
+
+/* Slides and content */
+
+.carousel .slide {
+  position: relative;
+  height: 450px;
+}
+
+.carousel .slide .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .slide .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  white-space: normal;
+  background-color: rgba(0,0,0,0.25);
+  color: white;
+}
+
+.carousel--testimonials .slide .content {
+  background-color: transparent;
+}
+
+.carousel .slide-meta-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 50px;
+}
+
+.carousel .slide .content h3 {
+  margin: 0;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.0151515em;
+  font-family: 'freight-sans-pro';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 66px !important;
+  line-height: 1.2em;
+  text-transform: capitalize;
+}
+
+.carousel--testimonials .slide .content h3 {
+  color: black;
+  font-size: 36px !important;
+}
+
+.carousel--testimonials .slide .content p {
+  padding: 0 10px;
+}
+
+/** Slide dots */
+.carousel .slick-dots {
+  bottom: 25px;
+}
+
+.carousel .slick-dots li {
+  padding: 0;
+  margin: 0 1px;
+}
+
+.carousel .slick-dots li.slick-active button .slick-dot-icon::before {
+  margin: 0 !important;
+  font-size: 32px !important;
+}
+
+.carousel .slick-dots li button .slick-dot-icon::before {
+  font-size: 32px !important;
+}
+
+/* Pause */
+
+.carousel .slick-autoplay-toggle-button {
+  left: 10px;
+  bottom: 25px;
+  color: white;
+}
+
+.carousel .slick-autoplay-toggle-button .slick-pause-icon::before {
+  font-size: 24px;
+}
+
+.carousel .slick-autoplay-toggle-button .slick-play-icon::before {
+  font-size: 24px;
+}
+
+/* ========================================================================== */
+/* 2. PRODUCT CAROUSEL */
+/* ========================================================================== */
+
+.carousel-products {
+  --current-image-height: 300px;
+  --thumbnails-track-height: 90px;
+  --thumbnail-width: 100px;
+}
+
+/** Container */
+.carousel-products .product-images {
+  max-width: 400px;
+}
+
+
+/** Thumbnails track */
+.carousel-products .thumbnails {
+  display: flex;
+}
+
+.carousel-products .slick-list {
+  flex: 1 1 auto;
+}
+
+
+/** Current image */
+.carousel-products .current-image {
+  margin-bottom: 1px;
+}
+
+.carousel-products .current-image a {
+  display: block;
+  height: var(--current-image-height);
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-products .current-image a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: box-shadow .1s linear;
+}
+
+.carousel-products .current-image a:focus {
+  outline: 0;
+}
+
+.carousel-products .current-image a:focus:before {
+  box-shadow: inset 0 0 0 1px black,
+  inset 0 0 0 5px white;
+}
+
+.carousel-products .current-image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/** Previous and next buttons */
+.carousel-products .button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  font-size: 30px;
+  color: rgba(0,0,0,.7);
+
+  padding: 0;
+  margin: 0 1px;
+  flex: 0 0 25px;
+
+  transition: all .2s linear;
+}
+
+.carousel-products .button:hover {
+  background-color: rgba(0,0,0,.1);
+  color: black;
+}
+
+.carousel-products .button:focus {
+  outline: none;
+  background-color: royalblue;
+  color: rgba(255,255,255,1);
+}
+
+/** Single thumbnail */
+.carousel-products .thumbnail {
+  flex: 0 0 var(--thumbnail-width);
+  margin-right: 1px;
+  position: relative;
+}
+
+.carousel-products .thumbnail-button {
+  display: block;
+  padding: 0;
+  margin-right: 1px;
+  height: var(--thumbnails-track-height);
+
+  cursor: pointer;
+  border: 0;
+  background: none;
+  background-color: rgba(0,0,0,.4);
+  transition: opacity .1s linear;
+}
+
+.carousel-products .thumbnail-button:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: box-shadow .1s linear;
+}
+
+.carousel-products .thumbnail-button:focus {
+  outline: 0;
+}
+
+.carousel-products .thumbnail-button:focus:before {
+  box-shadow: inset 0 0 0 1px black,
+  inset 0 0 0 4px white;
+}
+
+.carousel-products .thumbnail-button:focus img,
+.carousel-products .thumbnail-button:hover img,
+.carousel-products .thumbnail-button[aria-current="true"] img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.carousel-products .thumbnail-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: .5;
+  filter: grayscale(.6);
+  transition: all .1s linear;
+}
+
+/* ========================================================================== */
+/* 3. COMMON CLASSES (note lack of namespace) */
+/* ========================================================================== */
+
+.sr-only {
+  border:0;
+  clip:rect(0,0,0,0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  clip:auto;
+  height:auto;
+  margin:0;
+  overflow:visible;
+  position:static;
+  width:auto
 }
 
 /* Previous slide button */
@@ -96,123 +377,4 @@
 
 .carousel--testimonials .next-button-span::before {
   color: black;
-}
-
-/* Slides and content */
-
-.slide {
-  position: relative;
-  height: 450px;
-}
-
-.slide .background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  max-width: 100%;
-  width: 100%;
-  max-height: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
-  white-space: normal;
-  background-color: rgba(0,0,0,0.25);
-  color: white;
-}
-
-.carousel--testimonials .slide .content {
-  background-color: transparent;
-}
-
-.slide-meta-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 50px;
-}
-
-.slide .content h3 {
-  margin: 0;
-  color: white;
-  text-align: center;
-  letter-spacing: 0.0151515em;
-  font-family: 'freight-sans-pro';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 66px !important;
-  line-height: 1.2em;
-  text-transform: capitalize;
-}
-
-.carousel--testimonials .slide .content h3 {
-  color: black;
-  font-size: 36px !important;
-}
-
-.carousel--testimonials .slide .content p {
-  padding: 0 10px;
-}
-
-/** Slide dots */
-.slick-dots {
-  bottom: 25px;
-}
-
-.slick-dots li {
-  padding: 0;
-  margin: 0 1px;
-}
-
-.slick-dots li.slick-active button .slick-dot-icon::before {
-  margin: 0 !important;
-  font-size: 32px !important;
-}
-
-.slick-dots li button .slick-dot-icon::before {
-  font-size: 32px !important;
-}
-
-/* Pause */
-
-.slick-autoplay-toggle-button {
-  left: 10px;
-  bottom: 25px;
-  color: white;
-}
-
-.slick-autoplay-toggle-button .slick-pause-icon::before {
-  font-size: 24px;
-}
-
-.slick-autoplay-toggle-button .slick-play-icon::before {
-  font-size: 24px;
-}
-
-.sr-only {
-  border:0;
-  clip:rect(0,0,0,0);
-  height:1px;
-  margin:-1px;
-  overflow:hidden;
-  padding:0;
-  position:absolute;
-  width:1px
-}
-
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-  clip:auto;
-  height:auto;
-  margin:0;
-  overflow:visible;
-  position:static;
-  width:auto
 }
