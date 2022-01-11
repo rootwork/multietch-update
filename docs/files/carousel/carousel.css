@@ -28,7 +28,9 @@
 
 .carousel .slide .background-image {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
+  max-height: 100%;
+  max-width: none !important;
   object-fit: cover;
 }
 
@@ -63,7 +65,7 @@
 .carousel--products .slide-meta-content {
   position: absolute;
   top: auto;
-  bottom: 0;
+  bottom: 50px;
   transform: none;
 }
 
@@ -90,6 +92,7 @@
 }
 
 .carousel--products .slide .content p {
+  margin: 0;
   color: white;
 }
 
