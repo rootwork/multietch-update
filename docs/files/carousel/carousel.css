@@ -3,25 +3,37 @@
 /** Wrapper */
 .carousel {
   position: relative;
-  margin-bottom: 20px !important;
+  margin: 0 auto;
   max-width: 100%;
   width: 100%;
+}
+
+.carousel--testimonials {
+  max-width: 650px;
 }
 
 /* Resets for all buttons */
 .is-control {
   z-index: 1;
   background: none;
-  color: rgba(0,0,0,.7);
+  color: rgba(0,0,0,0.7);
   border: 0;
   cursor: pointer;
   transition: all .2s linear;
 }
 
+.carousel--testimonials .is-control {
+  color: rgba(0,0,0,0.2);
+}
+
 .is-control:focus {
   outline: none;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,1);
+}
+
+.carousel--testimonials .is-control:focus {
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* Pause/play toggle for autoplay */
@@ -54,6 +66,10 @@
   color: white;
 }
 
+.carousel--testimonials .previous-button-span::before {
+  color: black;
+}
+
 /* Next slide button */
 .next-button {
   position: absolute;
@@ -76,6 +92,10 @@
   line-height: 32px;
   font-family: 'freight-sans-pro';
   color: white;
+}
+
+.carousel--testimonials .next-button-span::before {
+  color: black;
 }
 
 /* Slides and content */
@@ -108,10 +128,15 @@
   color: white;
 }
 
+.carousel--testimonials .slide .content {
+  background-color: none;
+}
+
 .slide-meta-content {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  padding: 0 50px;
 }
 
 .slide .content h3 {
@@ -125,6 +150,11 @@
   font-size: 66px !important;
   line-height: 1.2em;
   text-transform: capitalize;
+}
+
+.carousel--testimonials .slide .content h3 {
+  color: black;
+  font-size: 36px !important;
 }
 
 /** Slide dots */
