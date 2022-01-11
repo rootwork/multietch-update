@@ -30,6 +30,11 @@ iframe, video {
   max-width: 100% !important;
 }
 
+.custom-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .custom-form input {
   margin: 0 1em;
   padding: 0.5em;
@@ -42,6 +47,8 @@ iframe, video {
 .custom-form textarea {
   display: block;
   padding: 0.5em;
+  max-width: 100%;
+  width: 100%;
 }
 
 .custom-form button {
