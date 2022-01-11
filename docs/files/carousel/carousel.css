@@ -10,6 +10,10 @@
   max-width: 650px;
 }
 
+.carousel--products {
+  max-width: 1000px;
+}
+
 /* Slides and content */
 
 .carousel .slide {
