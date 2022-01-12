@@ -169,7 +169,6 @@
 .carousel .previous-button,
 .carousel .next-button {
   position: absolute;
-  left: 0;
   top: 40%;
   padding: 5px 15px;
   font-size: 40px !important;
@@ -178,10 +177,12 @@
 
 .carousel .previous-button {
   z-index: 99;
+  left: 0;
 }
 
 .carousel .next-button {
   z-index: 98;
+  right: 0;
 }
 
 .carousel .previous-button-span::before,
