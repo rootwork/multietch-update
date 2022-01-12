@@ -165,60 +165,46 @@
   left: 10px;
 }
 
-/* Previous slide button */
-.carousel .previous-button {
+/* Previous/next buttons */
+.carousel .previous-button,
+.carousel .next-button {
   position: absolute;
   left: 0;
   top: 40%;
-
   padding: 5px 15px;
-  z-index: 3;
-
-  font-size: 40px;
-
+  font-size: 40px !important;
   background-color: transparent;
+}
+
+.carousel .previous-button {
+  z-index: 99;
+}
+
+.carousel .next-button {
+  z-index: 98;
+}
+
+.carousel .previous-button-span::before,
+.carousel .next-button-span::before {
+  font-size: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  font-family: 'freight-sans-pro' !important;
+  color: white !important;
 }
 
 .carousel .previous-button-span::before {
-  content: "\2B9C";
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  font-family: 'freight-sans-pro';
-  color: white;
-}
-
-.carousel--testimonials .previous-button-span::before {
-  color: black;
-}
-
-/* Next slide button */
-.carousel .next-button {
-  position: absolute;
-  right: 0;
-  top: 40%;
-
-  padding: 5px 15px;
-  z-index: 1;
-
-  font-size: 40px;
-
-  background-color: transparent;
+  content: "\1F878" !important; /* "wide-headed leftwards heavy barb arrow" */
 }
 
 .carousel .next-button-span::before {
-  content: "\2B9E";
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  font-family: 'freight-sans-pro';
-  color: white;
+  content: "\1F87A" !important;  /* "wide-headed rightwards heavy barb arrow" */
 }
 
+.carousel--testimonials .previous-button-span::before,
 .carousel--testimonials .next-button-span::before {
-  color: black;
+  color: black !important;
 }
 
 /* Screenreaders only */
