@@ -191,16 +191,16 @@
   width: 32px !important;
   height: 32px !important;
   line-height: 32px !important;
-  font-family: 'freight-sans-pro' !important;
+  font-family: sans !important;
   color: white !important;
 }
 
 .carousel .previous-button-span::before {
-  content: "\1F878" !important; /* "wide-headed leftwards heavy barb arrow" */
+  content: "<" !important; /* "wide-headed leftwards heavy barb arrow" */
 }
 
 .carousel .next-button-span::before {
-  content: "\1F87A" !important;  /* "wide-headed rightwards heavy barb arrow" */
+  content: ">" !important;  /* "wide-headed rightwards heavy barb arrow" */
 }
 
 .carousel--testimonials .previous-button-span::before,
