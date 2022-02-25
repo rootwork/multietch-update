@@ -86,3 +86,31 @@ The latter of these was used to create `brokenlinks.csv` which can be used to ma
 * Slideshows don't show controls consistently and were always substandard anyway, so they need to be fully replaced.
 
 * Contact forms (contact page and "keeping etch times consistent" page) need to be replaced with a non-SS option.
+
+## Ongoing work
+
+### Minifying files
+
+Minifying can be useful if you're running find-replace on multiple lines and don't want to worry about whitespace matching. It's also, of course, the natural state we should be serving HTML.
+
+To minify all files from `docs/` into a separate directory called `minified/` install the [binaries for tdewolff/minify](https://github.com/tdewolff/minify/releases) and run:
+
+```sh
+~/bin/minify --html-keep-comments --html-keep-conditional-comments --html-keep-default-attrvals --html-keep-document-tags --html-keep-end-tags --html-keep-quotes -r -o minified/ --match=\.html docs
+```
+
+### Prettifying files
+
+Install [Prettier](https://prettier.io/) with Node:
+
+```sh
+npm i -g prettier
+```
+
+Prettier defaults for HTML are fine, so you don't need to specify rules. Then run it on a specific file:
+
+```sh
+npx prettier -w <filename>
+```
+
+Ideally, run a minifier on the file once you're done with the work.
