@@ -3,7 +3,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.multietch.com/</loc>
-        <lastmod>2022-02-25T03:16:06+01:00</lastmod>
+        <lastmod>2022-06-20T03:16:06+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -48,7 +48,7 @@
     </url>
     <url>
         <loc>https://www.multietch.com/keep-etch-times-consistent</loc>
-        <lastmod>2022-02-25T03:16:06+01:00</lastmod>
+        <lastmod>2022-04-29T03:16:06+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -68,7 +68,7 @@
     </url>
     <url>
         <loc>https://www.multietch.com/safety</loc>
-        <lastmod>2022-02-25T03:16:06+01:00</lastmod>
+        <lastmod>2022-05-02T03:16:06+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -188,18 +188,23 @@
     </url>
     <url>
         <loc>https://www.multietch.com/contactus</loc>
-        <lastmod>2022-02-25T03:16:06+01:00</lastmod>
+        <lastmod>2022-06-20T03:16:06+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.multietch.com/multietch-blog</loc>
-        <lastmod>2022-02-25T03:16:06+01:00</lastmod>
+        <lastmod>2022-06-20T03:16:06+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://orders.multietch.com/</loc>
-        <lastmod>2022-02-25T03:16:06+01:00</lastmod>
+        <lastmod>2022-06-20T03:16:06+01:00</lastmod>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.multietch.com/non-us-orders</loc>
+        <lastmod>2022-06-20T03:16:06+01:00</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.multietch.com/about/team</loc>
@@ -223,7 +228,7 @@
     </url>
     <url>
         <loc>https://www.multietch.com/blog/etching-safety-environmental-issues</loc>
-        <lastmod>2022-02-25T03:16:13+01:00</lastmod>
+        <lastmod>2022-02-28T03:16:13+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -303,7 +308,7 @@
     </url>
     <url>
         <loc>https://www.multietch.com/blog/keeping-etch-times-consistent</loc>
-        <lastmod>2022-02-25T03:16:17+01:00</lastmod>
+        <lastmod>2022-04-29T03:16:17+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
