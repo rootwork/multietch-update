@@ -44,7 +44,6 @@ video {
 }
 
 .custom-form {
-  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -60,7 +59,7 @@ video {
 .custom-form textarea {
   display: block;
   padding: 0.5em;
-  max-width: 100%;
+  max-width: 95%;
   width: 100%;
 }
 
