@@ -1256,11 +1256,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                       <p>
                         <label for="name">Name</label>
                         <input
-                          data-tc-id="w-0.9549333050303623"
                           id="name"
                           name="name"
                           placeholder="First and last"
-                          required=""
+                          required="true"
                           tc-textcontent="true"
                           type="text"
                         />
@@ -1268,23 +1267,71 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                       <p>
                         <label for="email">Email address</label>
                         <input
-                          data-tc-id="w-0.6775670114275936"
                           id="email"
                           name="email"
-                          placeholder="email@domain.tld"
                           required=""
                           tc-textcontent="true"
                           type="email"
                         />
                       </p>
                       <p>
-                        <label for="message">Message</label>
+                        <label for="phone">Phone number</label>
+                        <input
+                          id="phone"
+                          name="phone"
+                          required=""
+                          tc-textcontent="true"
+                          type="tel"
+                        />
+                      </p>
+                      <p>
+                        <input type="checkbox" id="po" name="po" />
+                        <label for="po"
+                          >I'd like to discuss a purchase order contract</label
+                        ><br />
+                        <input type="checkbox" id="intl" name="intl" />
+                        <label for="intl"
+                          >I'd like to purchase Multi-Etch outside of the United
+                          States, Canada or Australia</label
+                        ><br />
+                      </p>
+
+                      <p>
+                        <label for="message">Questions or comments</label>
                         <textarea
-                          data-tc-id="0.5118739190311306"
                           id="message"
                           name="message"
                           required=""
                           rows="5"
+                          tc-textcontent="true"
+                        >
+                        </textarea>
+                      </p>
+                      <p>
+                        <label for="company">Company name</label>
+                        <input
+                          id="company"
+                          name="company"
+                          tc-textcontent="true"
+                          type="text"
+                        />
+                      </p>
+                      <p>
+                        <label for="company">Industry</label>
+                        <input
+                          id="industry"
+                          name="industry"
+                          tc-textcontent="true"
+                          type="text"
+                        />
+                      </p>
+                      <p>
+                        <label for="shipping">Your shipping address</label>
+                        <textarea
+                          id="shipping"
+                          name="shipping"
+                          required=""
+                          rows="3"
                           tc-textcontent="true"
                         >
                         </textarea>
